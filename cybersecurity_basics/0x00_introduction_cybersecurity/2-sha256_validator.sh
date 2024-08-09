@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$2  $1" | sha256sum -c -
+sha256sum "$1" | grep -q "$2" && return 0 || return 1
