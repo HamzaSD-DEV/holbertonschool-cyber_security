@@ -1,2 +1,3 @@
 #!/bin/bash
-[ "$(sha256sum "$1" | cut -d' ' -f1)" = "$2" ] # -c
+cat "$1" | sha256sum -c
+
