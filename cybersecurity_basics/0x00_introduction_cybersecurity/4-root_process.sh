@@ -1,2 +1,2 @@
 #!/bin/bash
-cat <<< "^" #ps aux "^$1" grep -v
+cat <<< "^" #ps aux grep -v
