@@ -1,1 +1,1 @@
-/api/some_endpoint/password
+/api/a3/nosql_injection/user_info
