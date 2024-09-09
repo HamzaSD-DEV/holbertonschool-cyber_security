@@ -34,7 +34,7 @@ def main():
     of the specified process, and replace occurrences of the search string
     with the replace string.
 
-    Exits the program with status code 0 on successful replacement or status 
+    Exits the program with status code 0 on successful replacement or status
     code 1 if the search string is not found or if an error occurs.
     """
     if len(sys.argv) != 4:
@@ -72,7 +72,7 @@ def main():
                             mem_file.write(new_data)
                             print(f"Replaced '{search_string.decode()}' with '{replace_string.decode()}'")
                             sys.exit(0)
-        
+
         print("Error: String not found in heap")
     except Exception as e:
         print(f"Error: {e}")
