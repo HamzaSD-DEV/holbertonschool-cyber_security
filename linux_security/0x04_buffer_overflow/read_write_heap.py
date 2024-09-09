@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""
+"""Documentation :
 Module docs.
 """
 
@@ -8,14 +8,14 @@ import sys
 import os
 
 def usage():
-    """
+    """Documentation :
     usage function docs.
     """
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
 
 def main():
-    """
+    """Documentation :
     main function docs.
     """
     if len(sys.argv) != 4:
