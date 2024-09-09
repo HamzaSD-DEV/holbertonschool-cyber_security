@@ -21,6 +21,10 @@ outputs a message indicating the result of the replacement.
 import sys
 import os
 
+"""
+Prints the usage message and exits the program with status code 1.
+"""
+
 def usage():
     """
     Prints the usage message and exits the program with status code 1.
@@ -28,6 +32,14 @@ def usage():
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
 
+"""
+Main function to handle command-line arguments, locate the heap memory
+of the specified process, and replace occurrences of the search string
+with the replace string.
+
+Exits the program with status code 0 on successful replacement or status
+code 1 if the search string is not found or if an error occurs.
+"""
 def main():
     """
     Main function to handle command-line arguments, locate the heap memory
