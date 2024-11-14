@@ -6,7 +6,7 @@ gen_flag () {
 
 
 export github_username="HamzaSD-DEV"
-export FLAG_0=$(gen_flag B9A1F2C3D4E5678F $github_username)
+export FLAG_0=$(gen_flag E5F6B7C8D9A01234 $github_username)
 
 # Create the flag file and set appropriate permissions
 echo "Holberton{root_periodic_script_escalation $FLAG_0}" 
