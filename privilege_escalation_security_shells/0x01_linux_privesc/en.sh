@@ -5,12 +5,6 @@ gen_flag () {
 }
 
 
-gen_flag2 () {
-    md5sum <<< $(openssl aes-256-cbc -pass pass:B9A1F2C3D4E5678F -nosalt -pbkdf2 <<< HamzaSD-DEV) | head -c 32
-}
-gen_flag2
-
-
 export github_username="HamzaSD-DEV"
 export FLAG_0=$(gen_flag B9A1F2C3D4E5678F $github_username)
 
