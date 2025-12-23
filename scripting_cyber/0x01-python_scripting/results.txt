@@ -1,0 +1,12 @@
+DNS Resolution Results
+==================================================
+
+Domain: google.com
+IP Address: 142.251.37.238
+
+Domain: github.com
+IP Address: 140.82.121.3
+
+Domain: wikipedia.org
+IP Address: 185.15.58.224
+
