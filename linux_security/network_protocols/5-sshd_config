@@ -1,0 +1,67 @@
+# OpenSSH Server Configuration - Hardened
+# This configuration follows security best practices
+
+# Protocol: Only use SSH Protocol 2 (Protocol 1 is insecure and deprecated)
+Protocol 2
+
+# Port: Default SSH port (consider changing to non-standard port for security through obscurity)
+Port 22
+
+# Authentication:
+# Disable root login for security - use sudo instead
+PermitRootLogin no
+
+# Use public key authentication (more secure than passwords)
+PubkeyAuthentication yes
+
+# Disable password authentication to prevent brute force attacks
+# Only allow key-based authentication
+PasswordAuthentication no
+
+# Never allow empty passwords
+PermitEmptyPasswords no
+
+# Disable X11 forwarding unless specifically needed (reduces attack surface)
+X11Forwarding no
+
+# Additional Security Hardening:
+
+# Limit authentication attempts to prevent brute force
+MaxAuthTries 3
+
+# Disable unused authentication methods
+ChallengeResponseAuthentication no
+KerberosAuthentication no
+GSSAPIAuthentication no
+
+# Only allow specific users (uncomment and modify as needed)
+# AllowUsers user1 user2
+
+# Use strong ciphers and MACs
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-512,hmac-sha2-256
+
+# Disable host-based authentication
+HostbasedAuthentication no
+IgnoreRhosts yes
+
+# Logging
+SyslogFacility AUTH
+LogLevel VERBOSE
+
+# Session settings
+ClientAliveInterval 300
+ClientAliveCountMax 2
+LoginGraceTime 60
+
+# Disable TCP forwarding if not needed
+AllowTcpForwarding no
+
+# Disable agent forwarding if not needed
+AllowAgentForwarding no
+
+# Use privilege separation
+UsePrivilegeSeparation sandbox
+
+# Banner (optional - display warning message)
+# Banner /etc/ssh/banner.txt

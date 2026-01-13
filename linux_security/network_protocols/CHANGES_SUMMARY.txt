@@ -1,0 +1,36 @@
+SSH Configuration Hardening - Changes Summary
+==============================================
+
+INSECURE (Before):                  SECURE (After):
+------------------                  ---------------
+Protocol 1,2                    →   Protocol 2
+PermitRootLogin yes             →   PermitRootLogin no
+PasswordAuthentication yes      →   PasswordAuthentication no
+PermitEmptyPasswords yes        →   PermitEmptyPasswords no
+PubkeyAuthentication yes        →   PubkeyAuthentication yes (kept)
+X11Forwarding yes               →   X11Forwarding no
+Port 22                         →   Port 22 (kept)
+
+Additional Security Enhancements Added:
+----------------------------------------
+✅ MaxAuthTries 3                    (Limit brute force attempts)
+✅ Strong Ciphers                    (aes256-ctr, aes192-ctr, aes128-ctr)
+✅ Strong MACs                       (hmac-sha2-512, hmac-sha2-256)
+✅ Disabled unused auth methods      (Kerberos, GSSAPI, etc.)
+✅ Session timeouts                  (ClientAliveInterval, LoginGraceTime)
+✅ Verbose logging                   (Better audit trail)
+✅ Disabled TCP/Agent forwarding     (Reduced attack surface)
+✅ Host-based auth disabled          (IgnoreRhosts, HostbasedAuth)
+
+Security Impact:
+----------------
+🔴 CRITICAL RISK → 🟢 LOW RISK
+
+All 5 major vulnerabilities fixed:
+✅ Protocol 1 removed (known vulnerabilities)
+✅ Root login disabled (reduces attack surface)
+✅ Password auth disabled (prevents brute force)
+✅ Empty passwords forbidden (closes security hole)
+✅ X11 forwarding disabled (reduces attack surface)
+
+File Location: linux_security/network_protocols/5-sshd_config
