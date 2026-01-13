@@ -1,8 +1,0 @@
-{
-  "google_ca": "WR2",
-  "google_valid_until": "2026-02-25",
-  "github_ca": "Sectigo Public Server Authentication CA DV E36",
-  "github_valid_until": "2026-04-05",
-  "same_ca": "no",
-  "signature_algorithm": "sha256WithRSAEncryption"
-}
