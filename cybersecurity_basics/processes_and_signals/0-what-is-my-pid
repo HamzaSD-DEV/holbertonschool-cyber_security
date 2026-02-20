@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays the current process ID (PID)
-awk '{print $1}' /proc/self/stat
+ps -p $$ -o pid=
