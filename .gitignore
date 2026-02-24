@@ -1,0 +1,10 @@
+# Ignore generated and sensitive data files
+convert_octal.sh
+dump.txt
+octal.txt
+holbertonschool.com.csv
+
+# Ignore checker and draft files
+cybersecurity_basics/processes_and_signals/Checker-output.md
+cybersecurity_basics/processes_and_signals/compare_pid.py
+cybersecurity_basics/processes_and_signals/Draft.md
